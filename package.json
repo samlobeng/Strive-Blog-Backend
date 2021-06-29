@@ -1,7 +1,6 @@
 {
-  "name": "server",
+  "name": "strive-blog-backend",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -26,5 +25,14 @@
     "lodash": "^4.17.21",
     "morgan": "^1.10.0",
     "uniqid": "^5.3.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samlobeng/Strive-Blog-Backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/samlobeng/Strive-Blog-Backend/issues"
+  },
+  "homepage": "https://github.com/samlobeng/Strive-Blog-Backend#readme",
+  "description": ""
 }
