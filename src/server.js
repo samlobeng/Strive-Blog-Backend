@@ -40,7 +40,7 @@ console.table(listEndpoints(server))
 
 server.use((req, res) => {
   if (!req.route) {
-    const error = createError(404, "This route is not found!")
+    const error = createError(404, "Route does not exist!")
     res.status(error.status).send(error)
   }
 })
