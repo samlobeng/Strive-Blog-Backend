@@ -32,7 +32,7 @@ const getPosts = () => JSON.parse(fs.readFileSync(postsJSONPath))
 const writePosts = (content) =>
   fs.writeFileSync(postsJSONPath, JSON.stringify(content))
 
-postsRouter.get("/", (req, res, next) => {
+postsRouter.get("/", async(req, res, next) => {
   try {
     const posts = await readFile("posts.json")
     res.send(posts)
