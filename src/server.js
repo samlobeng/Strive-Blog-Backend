@@ -29,7 +29,7 @@ server.use(
   })
 )
 server.use(express.json())
-server.use(morgan("common"))
+server.use(morgan("dev"))
 
 server.use("/authors", authorsRouter)
 server.use("/posts", postsRouter)

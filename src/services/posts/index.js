@@ -6,7 +6,7 @@ import uniqid from "uniqid"
 import multer from "multer"
 import { v2 as cloudinary } from "cloudinary"
 import { CloudinaryStorage } from "multer-storage-cloudinary"
-
+import { readFile, writeFile, findById } from "../../utils/file-utils.js"
 import createError from "http-errors"
 import { validationResult } from "express-validator"
 import { postsValidation } from "../../middlewares/validation/postsValidation.js"
@@ -34,7 +34,8 @@ const writePosts = (content) =>
 
 postsRouter.get("/", (req, res, next) => {
   try {
-    res.send(getPosts())
+    const posts = await readFile("posts.json")
+    res.send(posts)
   } catch (error) {
     next(error)
   }
