@@ -9,7 +9,7 @@ import authorsRouter from "./services/authors/index.js"
 import postsRouter from "./services/posts/index.js"
 import { errorMiddlewares } from "./middlewares/error/errors.js"
 
-const port = process.env.PORT || 3001
+const port = process.env.PORT 
 
 const server = express()
 
